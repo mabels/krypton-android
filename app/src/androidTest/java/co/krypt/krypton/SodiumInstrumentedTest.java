@@ -1,14 +1,15 @@
 package co.krypt.krypton;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 import org.libsodium.jni.Sodium;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
 
+import co.krypt.krypton.pairing.DeviceType;
 import co.krypt.krypton.pairing.Pairing;
-
-import static org.junit.Assert.assertTrue;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -24,7 +25,7 @@ public class SodiumInstrumentedTest {
         byte[] enclavePubKey = new byte[Sodium.crypto_box_publickeybytes()];
         byte[] enclavePrivKey = new byte[Sodium.crypto_box_secretkeybytes()];
         assertTrue(0 == Sodium.crypto_box_seed_keypair(pubKey, privKey, SecureRandom.getSeed(Sodium.crypto_box_seedbytes())));
-        Pairing pairing = new Pairing(pubKey, enclavePrivKey, enclavePubKey, "workstation");
+        Pairing pairing = new Pairing(pubKey, enclavePrivKey, enclavePubKey, "workstation", null, DeviceType.UNKNOWN);
         byte[] ciphertext = pairing.wrapKey();
 
         byte[] unwrapped = new byte[ciphertext.length - Sodium.crypto_box_sealbytes()];

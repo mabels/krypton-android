@@ -2,15 +2,16 @@ package co.krypt.krypton.team.home;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.ListViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -31,7 +32,7 @@ import co.krypt.krypton.team.TeamService.C;
 public class BlocksFragment extends Fragment {
     private static final String TAG = "BlocksFragment";
 
-    private ListViewCompat blocksList;
+    private ListView blocksList;
     private ArrayAdapter<Sigchain.FormattedBlock> blocksAdapter;
 
     @Override

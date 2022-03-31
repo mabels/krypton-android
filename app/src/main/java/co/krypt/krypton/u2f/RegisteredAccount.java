@@ -1,6 +1,7 @@
 package co.krypt.krypton.u2f;
 
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;

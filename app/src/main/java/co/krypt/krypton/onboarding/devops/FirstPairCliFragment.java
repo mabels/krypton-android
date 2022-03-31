@@ -6,14 +6,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import co.krypt.krypton.R;
 import co.krypt.krypton.analytics.Analytics;
@@ -102,7 +104,7 @@ public class FirstPairCliFragment extends Fragment {
             installCommand.setText("$ curl https://krypt.co/kr | sh");
 
             resetButtons();
-            curlButton.setTextColor(getResources().getColor(R.color.appGreen));
+            curlButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
             new Analytics(getContext()).postEvent("onboard_install", "curl", null, null, false);
         });
@@ -111,7 +113,7 @@ public class FirstPairCliFragment extends Fragment {
             installCommand.setText("$ brew install kryptco/tap/kr");
 
             resetButtons();
-            brewButton.setTextColor(getResources().getColor(R.color.appGreen));
+            brewButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
             new Analytics(getContext()).postEvent("onboard_install", "brew", null, null, false);
         });
@@ -120,7 +122,7 @@ public class FirstPairCliFragment extends Fragment {
             installCommand.setText("$ npm install -g krd # mac only");
 
             resetButtons();
-            npmButton.setTextColor(getResources().getColor(R.color.appGreen));
+            npmButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
             new Analytics(getContext()).postEvent("onboard_install", "npm", null, null, false);
         });
@@ -129,7 +131,7 @@ public class FirstPairCliFragment extends Fragment {
             installCommand.setText("# go to https://krypt.co/install");
 
             resetButtons();
-            moreButton.setTextColor(getResources().getColor(R.color.appGreen));
+            moreButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
             new Analytics(getContext()).postEvent("onboard_install", "more", null, null, false);
         });
@@ -139,10 +141,10 @@ public class FirstPairCliFragment extends Fragment {
     }
 
     private void resetButtons() {
-        curlButton.setTextColor(getResources().getColor(R.color.appGray));
-        brewButton.setTextColor(getResources().getColor(R.color.appGray));
-        npmButton.setTextColor(getResources().getColor(R.color.appGray));
-        moreButton.setTextColor(getResources().getColor(R.color.appGray));
+        curlButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+        brewButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+        npmButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+        moreButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
     }
 
 

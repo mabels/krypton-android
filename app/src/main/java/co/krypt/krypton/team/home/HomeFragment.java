@@ -1,24 +1,27 @@
 package co.krypt.krypton.team.home;
 
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatImageButton;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TimePicker;
+
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -36,7 +39,7 @@ import co.krypt.krypton.team.invite.CreateInviteDialogFragment;
 import co.krypt.krypton.transport.SNSTransport;
 import co.krypt.krypton.uiutils.TimeUtils;
 import co.krypt.krypton.uiutils.Transitions;
-import mobi.upod.timedurationpicker.TimeDurationPickerDialog;
+//import mobi.upod.timedurationpicker.TimeDurationPickerDialog;
 
 public class HomeFragment extends Fragment {
     private static final String TAG = "TeamHomeFragment";
@@ -274,20 +277,24 @@ public class HomeFragment extends Fragment {
             tempApprovalText.setText("Unrestricted");
         }
         Runnable editTempApproval = () -> {
-            new TimeDurationPickerDialog(
+            long aTime = Policy.temporaryApprovalSeconds(getContext(), Approval.ApprovalType.SSH_USER_HOST);
+            new TimePickerDialog(
                     getContext(),
-                    (v_, d) -> {
-                        new Thread(() -> {
-                            EventBus.getDefault().post(
-                                    new TeamService.RequestTeamOperation(
-                                            new Sigchain.RequestableTeamOperation(new Sigchain.Policy(d/1000)),
-                                            C.withConfirmStatus(getActivity())
-                                    ));
+                    new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                            new Thread(() -> {
+                                EventBus.getDefault().post(
+                                        new TeamService.RequestTeamOperation(
+                                                new Sigchain.RequestableTeamOperation(new Sigchain.Policy((long) (hourOfDay * 3600 + minute * 60))),
+                                                C.withConfirmStatus(getActivity())
+                                        ));
 
-                            scheduleUpdate(getContext());
-                        }).start();
+                                scheduleUpdate(getContext());
+                            }).start();
+                        }
                     },
-                    (Policy.temporaryApprovalSeconds(getContext(), Approval.ApprovalType.SSH_USER_HOST)) * 1000
+                    (int)aTime/3600, (int)(aTime/60) % 60, true
             ).show();
         };
         if (teamHomeData.is_admin) {
@@ -379,11 +386,11 @@ public class HomeFragment extends Fragment {
         billingPlan.setText(billing.currentTier.name);
         if (billing.currentTier.price > 0) {
             ViewCompat.setBackgroundTintList(billingPlan, ContextCompat.getColorStateList(getContext(), R.color.appGreen));
-            billingPlan.setTextColor(getContext().getResources().getColor(R.color.appGreen, null));
+            billingPlan.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
             manageBillingButton.setText("Manage Billing");
         } else {
             ViewCompat.setBackgroundTintList(billingPlan, ContextCompat.getColorStateList(getContext(), R.color.appWarning));
-            billingPlan.setTextColor(getContext().getResources().getColor(R.color.appWarning, null));
+            billingPlan.setTextColor(ContextCompat.getColor(getContext(), R.color.appWarning));
             manageBillingButton.setText("Upgrade");
         }
 

@@ -2,19 +2,20 @@ package co.krypt.krypton.team.onboarding.create;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.crashlytics.android.Crashlytics;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class OnboardingPinHostsFragment extends Fragment implements OnboardingPi
                         );
                     } catch (CryptoException e) {
                         e.printStackTrace();
-                        Crashlytics.logException(e);
+                        FirebaseCrashlytics.getInstance().recordException(e);
                     }
                 }
             }
@@ -118,13 +119,13 @@ public class OnboardingPinHostsFragment extends Fragment implements OnboardingPi
         if (toggleAllButton != null) {
             if (selectedHosts == hosts.size()) {
                 toggleAllButton.setText("Clear All");
-                toggleAllButton.setTextColor(toggleAllButton.getResources().getColor(R.color.appBlack, null));
+                toggleAllButton.setTextColor(toggleAllButton.getContext().getColor(R.color.appBlack));
                 toggleAllButton.setOnClickListener(v -> {
                     adapter.clearAll();
                 });
             } else {
                 toggleAllButton.setText("Select All");
-                toggleAllButton.setTextColor(toggleAllButton.getResources().getColor(R.color.appGreen, null));
+                toggleAllButton.setTextColor(toggleAllButton.getContext().getColor(R.color.appGreen));
                 toggleAllButton.setOnClickListener(v -> {
                     adapter.selectAll();
                 });

@@ -1,10 +1,11 @@
 package co.krypt.krypton.log;
 
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.gson.annotations.SerializedName;
 import com.j256.ormlite.field.DatabaseField;

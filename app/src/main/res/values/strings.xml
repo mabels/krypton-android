@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">Krypton</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="curl_install">$ curl https://krypt.co/kr | sh\n$ kr pair</string>
     <string name="rsa_key_type">RSA</string>
     <string name="ed25519_key_type">Ed25519</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="exampleUserID"><![CDATA[Kevin King <kevin @ krypt.co>]]></string>
     <string name="teams_invite_template"><![CDATA[<p>You\'re invited to join TEAM_NAME on APP_NAME!</p><p>Step 1. Install the Krypton app: https://get.krypt.co</p><p>Step 2. Accept Invite: TAP the link below or COPY this message (including the link) into Krypton.</p><p>INVITE_LINK</p>]]></string>
     <string name="billing_header"><![CDATA[Billing & Plan]]></string>
+    <string name="action_settings">Action Settings</string>
 </resources>

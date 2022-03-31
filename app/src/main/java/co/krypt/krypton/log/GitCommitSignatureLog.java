@@ -1,7 +1,8 @@
 package co.krypt.krypton.log;
 
-import android.support.constraint.ConstraintLayout;
 import android.view.View;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.amazonaws.util.StringUtils;
 import com.google.gson.annotations.SerializedName;

@@ -1,18 +1,19 @@
 package co.krypt.krypton.team.invite;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatImageButton;
-import android.support.v7.widget.ListViewCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -46,7 +47,7 @@ public class SelectIndividualsFragment extends Fragment {
         final View rootView = inflater.inflate(R.layout.fragment_teams_individual_emails_invite, container, false);
 
         ArrayAdapter emailsAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, new ArrayList<>());
-        ListViewCompat emailsList = rootView.findViewById(R.id.emailResultsList);
+        ListView emailsList = rootView.findViewById(R.id.emailResultsList);
         AppCompatEditText emailText = rootView.findViewById(R.id.emailAddInput);
         AppCompatImageButton addButton = rootView.findViewById(R.id.addEmailButton);
         createButton = rootView.findViewById(R.id.createIndividualLink);
@@ -128,11 +129,11 @@ public class SelectIndividualsFragment extends Fragment {
             );
             cancelButton.setText("Done");
             cancelButton.setOnClickListener(v -> {
-                getFragmentManager().beginTransaction()
+                getParentFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
                         .remove(this)
                         .commitAllowingStateLoss();
-                getFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                getParentFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             });
             createButton.setText("Resend");
         }

@@ -1,32 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+    <style name="AppTheme">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
     </style>
 
     <style name="AppTheme.Launcher">
         <item name="android:windowBackground">@drawable/splash</item>
-        <item name="colorPrimaryDark">@color/appGreen</item>
+        <item name="android:colorPrimaryDark">@color/appGreen</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="CodeText">
-        <item name="fontFamily">@font/source_code_pro</item>
-    </style>
-
-    <style name="AppRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="colorControlNormal">@color/appGray</item>
-        <item name="colorControlActivated">@color/appGreen</item>
+    <style name="AppRadioButton">
+        <item name="android:colorControlNormal">@color/appGray</item>
+        <item name="android:colorControlActivated">@color/appGreen</item>
         <item name="android:textColor">@color/checked_green</item>
     </style>
 
-    <style name="TeamOnboardingButton" parent="Base.Widget.AppCompat.Button.Colored">
+    <style name="TeamOnboardingButton">
         <item name="android:colorAccent">@color/appGreen</item>
         <item name="android:colorButtonNormal">@color/appGray</item>
         <item name="android:elevation">10dp</item>
@@ -38,7 +34,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.Dialog">
+    <style name="ThemeCustom.TabLayout"
+        parent="Theme.MaterialComponents.Light"/>
+
+    <style name="ThemeTransparent">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -47,7 +46,7 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-    <style name="MainTabText" parent="TextAppearance.Design.Tab">
+    <style name="MainTabText">
         <item name="android:textSize">9sp</item>
     </style>
 

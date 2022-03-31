@@ -9,9 +9,6 @@ import android.content.DialogInterface;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +21,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -55,7 +57,7 @@ public class TOTPAccountsFragment extends Fragment {
             totpAccountsAdapter = new TOTPRecyclerViewAdapter(TOTP.getAccounts(getContext()));
         }
         catch (SQLException e) {
-            Crashlytics.logException(e);
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
     }
@@ -84,7 +86,7 @@ public class TOTPAccountsFragment extends Fragment {
     }
 
     @Subscribe
-    public void refreshAccounts(IdentityService.TOTPAccountsUpdated _) {
+    public void refreshAccounts(IdentityService.TOTPAccountsUpdated _nothing) {
         try {
             totpAccountsAdapter.accounts = TOTP.getAccounts(getContext());
             totpAccountsAdapter.notifyDataSetChanged();
@@ -117,7 +119,8 @@ public class TOTPAccountsFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
+        public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int _position) {
+            int position = holder.getAdapterPosition();
             TOTPViewHolder totpHolder = (TOTPViewHolder) holder;
             totpHolder.account = accounts.get(position);
             totpHolder.updateView();
@@ -159,8 +162,8 @@ public class TOTPAccountsFragment extends Fragment {
 
             private boolean codeShown = false;
 
-            private final int appGreen = getResources().getColor(R.color.appGreen, getContext().getTheme());
-            private final int appWarning = getResources().getColor(R.color.appWarning, getContext().getTheme());
+            private final int appGreen = ContextCompat.getColor(getContext(), R.color.appGreen);
+            private final int appWarning = ContextCompat.getColor(getContext(), R.color.appWarning);
 
             private TOTPViewHolder(View view) {
                 super(view);

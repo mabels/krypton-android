@@ -2,10 +2,11 @@ package co.krypt.krypton.silo;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.util.LruCache;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.LruCache;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.amazonaws.util.Base64;
 import com.google.common.collect.Lists;

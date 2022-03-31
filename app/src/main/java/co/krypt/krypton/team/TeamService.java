@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -36,7 +38,7 @@ public class TeamService {
           When passed an activity, operation status indicator is rendered to it.
           If confirm is true, an approval dialog will be shown before executing the operation.
          */
-        @android.support.annotation.Nullable
+        @Nullable
         public final Activity a;
         public final boolean confirm;
         public final Context c;
@@ -44,7 +46,7 @@ public class TeamService {
         /*
           Optional callback to be run on the main thread
            */
-        @android.support.annotation.Nullable
+        @Nullable
         public final ResponseHandler<R> r;
 
         /*

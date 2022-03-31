@@ -7,11 +7,12 @@ import android.graphics.drawable.TransitionDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.VideoView;
+
+import androidx.fragment.app.Fragment;
 
 import co.krypt.krypton.R;
 

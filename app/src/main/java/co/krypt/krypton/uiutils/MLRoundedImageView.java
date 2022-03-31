@@ -16,9 +16,10 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
-public class MLRoundedImageView extends ImageView {
+import androidx.appcompat.widget.AppCompatImageView;
+
+public class MLRoundedImageView extends AppCompatImageView {
     Drawable drawable;
     Bitmap bitmap;
     Canvas c;

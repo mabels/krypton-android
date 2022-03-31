@@ -4,12 +4,12 @@
     <color name="colorPrimaryDark">#2b424b</color>
     <!--<color name="colorAccent">#11A9E4</color>-->
     <color name="colorAccent">#5BC894</color>
-    <color name="colorDestructive">#e4113c</color>
     <color name="appBlueGrayBackground">#27272780</color>
 
     <color name="appGreen">#5bc894</color>
     <color name="appWhite">#ffffff</color>
     <color name="appGray">#aaaaaa</color>
+    <color name="appTextGray">#222222</color>
     <color name="appBlack">#343434</color>
     <color name="appBlue">#666ee8</color>
     <color name="appShadowGray">#38aaaaaa</color>

@@ -1,6 +1,5 @@
 package co.krypt.krypton.git;
 
-import android.support.constraint.ConstraintLayout;
 import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.TextView;
@@ -23,6 +22,8 @@ import co.krypt.krypton.protocol.GitSignRequestBody;
 import co.krypt.krypton.protocol.JSON;
 
 import static android.view.View.GONE;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 /**
  * Created by Kevin King on 6/17/17.

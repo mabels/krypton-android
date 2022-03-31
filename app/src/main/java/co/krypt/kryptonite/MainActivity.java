@@ -9,16 +9,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -27,8 +17,22 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+
+import com.google.android.material.tabs.TabLayout;
 
 import co.krypt.krypton.R;
 import co.krypt.krypton.analytics.Analytics;
@@ -36,8 +40,6 @@ import co.krypt.krypton.approval.ApprovalDialog;
 import co.krypt.krypton.developer.DeveloperFragment;
 import co.krypt.krypton.devices.DevicesFragment;
 import co.krypt.krypton.help.HelpFragment;
-import co.krypt.krypton.totp.TOTPAccountsFragment;
-import co.krypt.krypton.u2f.U2FAccountsFragment;
 import co.krypt.krypton.onboarding.OnboardingActivity;
 import co.krypt.krypton.onboarding.devops.DevopsOnboardingProgress;
 import co.krypt.krypton.onboarding.devops.DevopsOnboardingStage;
@@ -54,11 +56,13 @@ import co.krypt.krypton.team.Native;
 import co.krypt.krypton.team.TeamDataProvider;
 import co.krypt.krypton.team.TeamFragment;
 import co.krypt.krypton.team.onboarding.TeamOnboardingActivity;
+import co.krypt.krypton.totp.TOTPAccountsFragment;
 import co.krypt.krypton.transport.BluetoothService;
+import co.krypt.krypton.u2f.U2FAccountsFragment;
 import co.krypt.krypton.utils.CrashReporting;
 import co.krypt.krypton.utils.Services;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
     private static final String TAG = "MainActivity";
     public static final int KEYS_FRAGMENT_POSITION = 0;
     public static final int CODES_FRAGMENT_POSITION = 1;
@@ -78,12 +82,12 @@ public class MainActivity extends AppCompatActivity {
     private static final Services services = new Services();
 
     /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * The {@link PagerAdapter} that will provide
      * fragments for each of the sections. We use a
      * {@link FragmentPagerAdapter} derivative, which will keep every
      * loaded fragment in memory. If this becomes too memory intensive, it
      * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     * {@link FragmentStatePagerAdapter}.
      */
     public SectionsPagerAdapter mSectionsPagerAdapter;
 

@@ -1,20 +1,20 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="co.krypt.krypton.onboarding.devops.FirstPairCliFragment">
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/installCommand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/terminal_bg_top"
         android:fontFamily="@font/code"
-        android:paddingBottom="2dp"
         android:paddingLeft="6dp"
         android:paddingTop="10dp"
+        android:paddingBottom="2dp"
         android:shadowColor="@color/appBlack"
         android:shadowRadius="4"
         android:text="$ curl https://krypt.co/kr | sh"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="@+id/header1"
         app:layout_constraintTop_toBottomOf="@+id/curlButton" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/npmButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -36,39 +36,39 @@
         android:text="NPM"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appTextGray"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/moreButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/brewButton"
         app:layout_constraintTop_toTopOf="@+id/brewButton" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/moreButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@null"
         android:fontFamily="@font/code_bold"
         android:text="MORE"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appTextGray"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/header1"
         app:layout_constraintStart_toEndOf="@+id/npmButton"
         app:layout_constraintTop_toTopOf="@+id/npmButton" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/addKeyTextView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/terminal_bg_bottom"
         android:fontFamily="@font/code"
-        android:paddingBottom="10dp"
         android:paddingLeft="6dp"
         android:paddingTop="2dp"
+        android:paddingBottom="10dp"
         android:shadowColor="@color/appBlack"
         android:shadowRadius="4"
         android:text="$ kr pair"
@@ -80,7 +80,7 @@
         app:layout_constraintStart_toStartOf="@+id/installCommand"
         app:layout_constraintTop_toBottomOf="@+id/installCommand" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/curlButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -98,7 +98,7 @@
         app:layout_constraintStart_toStartOf="@+id/header1"
         app:layout_constraintTop_toBottomOf="@+id/header1" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/brewButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -108,44 +108,44 @@
         android:text="BREW"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appTextGray"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/npmButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/curlButton"
         app:layout_constraintTop_toTopOf="@+id/curlButton" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/open_sans_bold"
         android:text="SKIP"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appTextGray"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/header1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="1. Install and run kr on your computer"
         android:textColor="@color/appBlack"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header0"/>
+        app:layout_constraintTop_toBottomOf="@+id/header0" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView"
         android:layout_width="32dp"
         android:layout_height="40dp"
@@ -156,7 +156,7 @@
         app:layout_constraintTop_toTopOf="@+id/nextButton"
         app:srcCompat="@drawable/krypton_icon_transparent_circle" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/header2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -170,19 +170,19 @@
         app:layout_constraintStart_toStartOf="@+id/header1"
         app:layout_constraintTop_toBottomOf="@+id/addKeyTextView2" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pairLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header2"></android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/header2"></androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/header0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -190,6 +190,6 @@
         android:text="Setup Krypton for SSH and Git"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

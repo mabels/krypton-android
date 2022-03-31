@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:id="@+id/fragment_teams_home"
@@ -23,7 +23,7 @@
             >
 
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="48dp"
@@ -31,7 +31,7 @@
                 android:clipChildren="false"
                 >
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/teamInfoCell"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView44"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/teamName"
                         android:inputType="textNoSuggestions"
                         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView44"/>
 
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView46"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/teamName"/>
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/email"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView46"
                         app:layout_constraintVertical_bias="0.0"/>
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/adminLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -123,16 +123,16 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/email"/>
 
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/inviteContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/teamInfoCell"
                     >
 
-                    <android.support.v7.widget.AppCompatButton
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/inviteButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         />
 
-                    <android.support.v7.widget.AppCompatButton
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/cancelInvitesButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -176,9 +176,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/inviteButton"/>
 
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/membersContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -187,7 +187,7 @@
                     app:layout_constraintStart_toStartOf="@+id/teamInfoCell"
                     app:layout_constraintTop_toBottomOf="@id/inviteContainer">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/membersContainerHeader"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/membersContainerText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -221,7 +221,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"/>
 
-                    <android.support.v7.widget.AppCompatImageButton
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/membersContainerButton"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -236,9 +236,9 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/right_chevron"/>
 
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/pinnedHostsCell"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
                     app:layout_constraintStart_toStartOf="@+id/teamInfoCell"
                     app:layout_constraintTop_toBottomOf="@+id/membersContainer">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/pinnedHostsHeader"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/pinnedHostsText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -271,7 +271,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/pinnedHostsHeader"
                         />
 
-                    <android.support.v7.widget.AppCompatImageButton
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/pinnedHostsButton"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -294,9 +294,9 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"/>
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/activityCell"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -304,7 +304,7 @@
                     app:layout_constraintStart_toStartOf="@+id/pinnedHostsCell"
                     app:layout_constraintTop_toBottomOf="@+id/pinnedHostsCell">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/activiityHeader"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -316,7 +316,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/activityText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -329,7 +329,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/activiityHeader"
                         />
 
-                    <android.support.v7.widget.AppCompatImageButton
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/activityButton"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -353,9 +353,9 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"/>
 
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/temporaryApprovalCell"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -365,7 +365,7 @@
                     app:layout_constraintStart_toStartOf="@+id/pinnedHostsCell"
                     app:layout_constraintTop_toBottomOf="@+id/activityCell">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tempTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -376,7 +376,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tempApproveLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -392,7 +392,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/tempTitle"
                         />
 
-                    <android.support.v7.widget.AppCompatImageButton
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/tempApprovalButton"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -408,9 +408,9 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/auditLogCell"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -434,7 +434,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         />
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/auditLogLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -450,7 +450,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/auditLogTitle"
                         />
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/auditLogTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -460,7 +460,7 @@
                         android:textSize="10sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
                     android:id="@+id/separatorLineTeams"
@@ -472,7 +472,7 @@
                     app:layout_constraintStart_toStartOf="@+id/auditLogCell"
                     app:layout_constraintTop_toBottomOf="@+id/auditLogCell"/>
 
-                <android.support.v7.widget.AppCompatButton
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/moreSettingsButton"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
@@ -491,7 +491,7 @@
                     app:layout_constraintStart_toStartOf="@id/auditLogCell"
                     app:layout_constraintTop_toBottomOf="@id/auditLogCell"/>
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/billingOuterContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -504,10 +504,10 @@
                     >
 
                     <include layout="@layout/teams_billing"/>
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
     </android.support.v4.widget.SwipeRefreshLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,16 @@
 package co.krypt.krypton.team.invite.inperson.admin;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatImageView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
@@ -41,7 +42,7 @@ import co.krypt.krypton.uiutils.Transitions;
  *  Member polls until invite posted to chain and read/accept invite succeed
  */
 
-public class AdminQR extends Fragment{
+public class AdminQR extends Fragment {
 
     private AppCompatImageView qr = null;
 

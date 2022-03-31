@@ -21,19 +21,19 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:replace="android:allowBackup">
         <!-- Note: MainActivity kept the legacy package so that launch icons on the home screen remained. -->
         <activity
             android:name="co.krypt.kryptonite.MainActivity"
             android:label="Krypton"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Launcher"
-            android:windowSoftInputMode="stateHidden">
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -46,8 +46,8 @@
         <activity
             android:name="co.krypt.krypton.u2f.U2FAuthenticateActivity"
             android:launchMode="standard"
-            android:theme="@style/Theme.Transparent"
-            >
+            android:theme="@style/ThemeTransparent"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.apps.authenticator.AUTHENTICATE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -57,7 +57,8 @@
 
         <service
             android:name=".transport.FirebaseMessagingService"
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
@@ -65,7 +66,7 @@
         <service
             android:name=".transport.FirebaseInstanceIDService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
@@ -84,14 +85,16 @@
         <activity
             android:name=".onboarding.OnboardingActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Launcher"/>
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
         <activity
             android:name=".team.onboarding.TeamOnboardingActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Launcher"
-            android:windowSoftInputMode="adjustNothing">
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 

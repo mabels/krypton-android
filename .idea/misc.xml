@@ -1,30 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/drawable/action_button.xml" value="0.147" />
+        <entry key="app/src/main/res/drawable/action_button_small_rect.xml" value="0.147" />
+        <entry key="app/src/main/res/drawable/admin_badge_bg.xml" value="0.147" />
+        <entry key="app/src/main/res/drawable/bottom_border.xml" value="0.147" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/activity_u2f_authenticate.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/approval.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/approvals_list.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/cli_device.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/cli_device_card.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/commit.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/commit_remote.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/commit_short.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_developer.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_devices_empty.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_devices_list.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_first_pair_cli.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_first_pair_ext.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/fragment_generate.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_help.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_me_header.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/fragment_pair.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_teams_invite_inperson_admin_qr.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_teams_members.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_totp_accounts.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/fragment_u2f_accounts.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/request_no_action_remote.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/result_remote.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/signature_log.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/tag_short.xml" value="0.10280797101449275" />
+        <entry key="app/src/main/res/layout/teams_loader.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/teams_onboarding_pinnedhost_item.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/totp_item.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/u2f_item.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/totp_item_menu.xml" value="0.14375" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
     <option name="myNullables">
       <value>
-        <list size="4">
+        <list size="12">
           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
           <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
           <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="6" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+          <item index="7" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="8" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="9" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="11" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
         </list>
       </value>
     </option>
     <option name="myNotNulls">
       <value>
-        <list size="4">
+        <list size="11">
           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
           <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
           <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="5" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="6" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="7" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="10" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
         </list>
       </value>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

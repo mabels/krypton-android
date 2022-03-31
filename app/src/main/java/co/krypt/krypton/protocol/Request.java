@@ -1,7 +1,8 @@
 package co.krypt.krypton.protocol;
 
-import android.support.constraint.ConstraintLayout;
 import android.widget.RemoteViews;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.amazonaws.util.Base32;
 import com.github.zafarkhaja.semver.Version;

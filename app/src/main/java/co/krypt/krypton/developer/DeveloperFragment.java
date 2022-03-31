@@ -1,14 +1,16 @@
 package co.krypt.krypton.developer;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import co.krypt.krypton.R;
 import co.krypt.krypton.analytics.Analytics;
@@ -58,8 +60,7 @@ public class DeveloperFragment extends Fragment {
                 installCommand.setText("$ curl https://krypt.co/kr | sh");
 
                 resetButtons();
-                curlButton.setTextColor(getResources().getColor(R.color.appGreen));
-
+                curlButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
                 new Analytics(getContext()).postEvent("help_install", "curl", null, null, false);
             }
         });
@@ -70,7 +71,7 @@ public class DeveloperFragment extends Fragment {
                 installCommand.setText("$ brew install kryptco/tap/kr");
 
                 resetButtons();
-                brewButton.setTextColor(getResources().getColor(R.color.appGreen));
+                brewButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
                 new Analytics(getContext()).postEvent("help_install", "brew", null, null, false);
             }
@@ -82,7 +83,7 @@ public class DeveloperFragment extends Fragment {
                 installCommand.setText("$ npm install -g krd # mac only");
 
                 resetButtons();
-                npmButton.setTextColor(getResources().getColor(R.color.appGreen));
+                npmButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
                 new Analytics(getContext()).postEvent("help_install", "npm", null, null, false);
             }
@@ -94,7 +95,7 @@ public class DeveloperFragment extends Fragment {
                 installCommand.setText("# go to https://krypt.co/install");
 
                 resetButtons();
-                moreButton.setTextColor(getResources().getColor(R.color.appGreen));
+                moreButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
 
                 new Analytics(getContext()).postEvent("help_install", "more", null, null, false);
             }
@@ -105,9 +106,9 @@ public class DeveloperFragment extends Fragment {
             public void onClick(View v) {
                 addKeyCommandTextView.setText("$ kr github");
 
-                githubButton.setTextColor(getResources().getColor(R.color.appGreen));
-                digitaloceanButton.setTextColor(getResources().getColor(R.color.appGray));
-                awsButton.setTextColor(getResources().getColor(R.color.appGray));
+                githubButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
+                digitaloceanButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+                awsButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
 
                 new Analytics(getContext()).postEvent("add key", "GitHub", null, null, false);
             }
@@ -118,9 +119,9 @@ public class DeveloperFragment extends Fragment {
             public void onClick(View v) {
                 addKeyCommandTextView.setText("$ kr digitalocean");
 
-                digitaloceanButton.setTextColor(getResources().getColor(R.color.appGreen));
-                githubButton.setTextColor(getResources().getColor(R.color.appGray));
-                awsButton.setTextColor(getResources().getColor(R.color.appGray));
+                digitaloceanButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
+                githubButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+                awsButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
 
                 new Analytics(getContext()).postEvent("add key", "DigitalOcean", null, null, false);
             }
@@ -131,9 +132,9 @@ public class DeveloperFragment extends Fragment {
             public void onClick(View v) {
                 addKeyCommandTextView.setText("$ kr aws");
 
-                awsButton.setTextColor(getResources().getColor(R.color.appGreen));
-                githubButton.setTextColor(getResources().getColor(R.color.appGray));
-                digitaloceanButton.setTextColor(getResources().getColor(R.color.appGray));
+                awsButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
+                githubButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+                digitaloceanButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
 
                 new Analytics(getContext()).postEvent("add key", "AWS", null, null, false);
             }
@@ -152,10 +153,10 @@ public class DeveloperFragment extends Fragment {
     }
 
     private void resetButtons() {
-        curlButton.setTextColor(getResources().getColor(R.color.appGray));
-        brewButton.setTextColor(getResources().getColor(R.color.appGray));
-        npmButton.setTextColor(getResources().getColor(R.color.appGray));
-        moreButton.setTextColor(getResources().getColor(R.color.appGray));
+        curlButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+        brewButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+        npmButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
+        moreButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appTextGray));
     }
 
 

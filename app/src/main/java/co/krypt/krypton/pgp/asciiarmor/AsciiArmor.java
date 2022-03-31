@@ -1,6 +1,7 @@
 package co.krypt.krypton.pgp.asciiarmor;
 
-import android.support.v4.util.Pair;
+
+import androidx.core.util.Pair;
 
 import com.github.zafarkhaja.semver.Version;
 

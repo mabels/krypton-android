@@ -1,6 +1,6 @@
 package co.krypt.krypton;
 
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import com.amazonaws.util.Base16;
 

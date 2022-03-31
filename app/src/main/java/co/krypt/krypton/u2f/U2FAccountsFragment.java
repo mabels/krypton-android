@@ -3,12 +3,6 @@ package co.krypt.krypton.u2f;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.ListViewCompat;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +11,16 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -35,13 +39,12 @@ import co.krypt.krypton.me.MeStorage;
 import co.krypt.krypton.protocol.Profile;
 import co.krypt.krypton.silo.IdentityService;
 import co.krypt.krypton.silo.Silo;
-import co.krypt.krypton.u2f.KnownAppIds;
 import co.krypt.krypton.uiutils.Error;
 
 public class U2FAccountsFragment extends Fragment {
     private static final String TAG = "U2FAccountsFragment";
     private EditText profileEmail;
-    private ListViewCompat accounts;
+    private ListView accounts;
     private ArrayAdapter<U2F.KeyManager.Account> accountsAdapter;
 
     private SharedPreferences prefs;
@@ -68,7 +71,7 @@ public class U2FAccountsFragment extends Fragment {
 
         profileEmail = v.findViewById(R.id.profileEmail);
         profileEmail.setText("loading...");
-        profileEmail.setTextColor(getResources().getColor(R.color.appGray, null));
+        profileEmail.setTextColor(ContextCompat.getColor(getContext(), R.color.appGray));
         profileEmail.setOnEditorActionListener((v12, keyCode, event) -> {
             v12.clearFocus();
             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -98,11 +101,11 @@ public class U2FAccountsFragment extends Fragment {
             profileEmail.setText(MeStorage.getDeviceName());
             Log.i(TAG, "no profile");
         }
-        profileEmail.setTextColor(getResources().getColor(R.color.appBlack, null));
+        profileEmail.setTextColor(ContextCompat.getColor(getContext(), R.color.appBlack));
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void updateAccounts(IdentityService.U2FAccountsUpdated _) {
+    public void updateAccounts(IdentityService.U2FAccountsUpdated _nothing) {
         try {
             List<U2F.KeyManager.Account> securedAccounts = U2F.getAccounts(getContext());
             List<U2F.KeyManager.Account> filteredAccounts = new ArrayList<>();
@@ -181,13 +184,13 @@ public class U2FAccountsFragment extends Fragment {
                 return v;
             }
 
-            AppCompatTextView name = v.findViewById(R.id.accountName);
+            TextView name = v.findViewById(R.id.accountName);
             name.setText(account.name);
 
-            AppCompatImageView logo = v.findViewById(R.id.icon);
+            ImageView logo = v.findViewById(R.id.icon);
             logo.setImageResource(account.logo);
 
-            AppCompatTextView addedOn = v.findViewById(R.id.dateAdded);
+            TextView addedOn = v.findViewById(R.id.dateAdded);
             if (account.lastUsed != null) {
                 String timeAdded = DateUtils.getRelativeTimeSpanString(account.lastUsed.getTime(), System.currentTimeMillis(), 1000).toString();
                 addedOn.setText("logged in " + timeAdded);

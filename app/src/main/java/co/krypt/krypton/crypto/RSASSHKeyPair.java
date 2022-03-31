@@ -2,10 +2,11 @@ package co.krypt.krypton.crypto;
 
 import android.security.keystore.KeyInfo;
 import android.security.keystore.KeyProperties;
-import android.support.annotation.NonNull;
-import android.support.v4.util.Pair;
 import android.util.Base64;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.core.util.Pair;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

@@ -2,13 +2,13 @@ package co.krypt.krypton.transport;
 
 import android.util.Log;
 
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import co.krypt.krypton.exception.TransportException;
 import co.krypt.krypton.utils.Services;
 
-public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
+public class FirebaseInstanceIDService extends com.google.firebase.messaging.FirebaseMessagingService {
     private static final Services services = new Services();
     private static final String TAG = "FirebaseInstanceID";
 
@@ -16,9 +16,9 @@ public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
     }
 
     @Override
-    public void onTokenRefresh() {
+    public void onNewToken(String refreshedToken) {
         // Get updated InstanceID token.
-        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+//        Task<String> refreshedToken = FirebaseMessaging.getInstance().getToken();
         Log.d(TAG, "Refreshed token: " + refreshedToken);
 
         // If you want to send messages to this application instance or

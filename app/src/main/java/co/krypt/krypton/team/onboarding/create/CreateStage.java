@@ -1,6 +1,6 @@
 package co.krypt.krypton.team.onboarding.create;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 /**
  * Created by Kevin King on 1/11/17.

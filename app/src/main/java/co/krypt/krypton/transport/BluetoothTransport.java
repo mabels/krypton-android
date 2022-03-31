@@ -21,8 +21,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.ParcelUuid;
-import android.support.v4.util.Pair;
 import android.util.Log;
+
+import androidx.core.util.Pair;
 
 import com.google.common.collect.Sets;
 

@@ -1,13 +1,14 @@
 package co.krypt.krypton.approval;
 
 import android.app.Activity;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.util.Pair;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.util.MutableBoolean;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.util.Pair;
 
 import co.krypt.krypton.R;
 import co.krypt.krypton.pairing.Pairing;

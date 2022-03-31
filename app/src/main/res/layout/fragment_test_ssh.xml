@@ -1,11 +1,11 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="co.krypt.krypton.onboarding.devops.TestSSHFragment">
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/skipButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView3"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="@+id/skipButton"
         app:srcCompat="@drawable/paired_icon" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:text="kking@Macbook Pro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:textColor="@color/appBlack"
         android:fontFamily="@font/open_sans_bold" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:text="Now you are ready to SSH using Krypton!"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/deviceName" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:id="@+id/rule"
@@ -70,9 +70,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp">
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:text="Try it out!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rule"
         android:layout_marginTop="16dp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tryText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
         app:layout_constraintStart_toStartOf="@+id/tryHeader"
         app:layout_constraintTop_toBottomOf="@+id/tryHeader" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:text="Add my SSH public key to GitHub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tryText"
         android:layout_marginTop="16dp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/githubText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
         app:layout_constraintStart_toStartOf="@+id/githubHeader"
         app:layout_constraintTop_toBottomOf="@+id/githubHeader" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:text="DONE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -157,4 +157,4 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

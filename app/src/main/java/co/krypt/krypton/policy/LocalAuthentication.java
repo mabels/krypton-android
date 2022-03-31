@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
+
+import androidx.appcompat.app.AlertDialog;
 
 import co.krypt.krypton.R;
 import co.krypt.kryptonite.MainActivity;

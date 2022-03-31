@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,22 +10,22 @@
 
     <!-- Dummy item to prevent EditText from receiving focus -->
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/cliHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
         android:text="Install the kr command-line tool"
         android:textColor="@color/appBlack"
         android:textSize="18sp"
         app:fontFamily="@font/open_sans_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/awsButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -36,13 +36,13 @@
         android:text="AWS"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appTextGray"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/digitaloceanButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/digitaloceanButton"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/digitaloceanButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -52,14 +52,13 @@
         android:text="DigitalOcean"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appTextGray"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/githubButton"
         app:layout_constraintLeft_toRightOf="@+id/githubButton"
-        app:layout_constraintRight_toLeftOf="@id/awsButton"
-        />
+        app:layout_constraintRight_toLeftOf="@id/awsButton" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView11"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -79,7 +78,7 @@
         app:layout_constraintStart_toStartOf="@+id/addKeyTextView"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView14"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -101,7 +100,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/awsButton"/>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/addKeyTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -122,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView13"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -142,12 +141,13 @@
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/githubButton"
         android:layout_width="0dp"
         android:layout_height="20dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
         android:background="@null"
         android:fontFamily="@font/open_sans_bold"
         android:minWidth="0dp"
@@ -159,9 +159,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintRight_toLeftOf="@id/digitaloceanButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addKeyTextView3"/>
+        app:layout_constraintTop_toBottomOf="@id/addKeyTextView3"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -175,7 +176,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/addKeyTextView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/addKeyTextView3"
         android:layout_width="0dp"
         android:layout_height="35dp"
@@ -195,7 +196,7 @@
         app:layout_constraintStart_toStartOf="@+id/installCommandHelp"
         app:layout_constraintTop_toBottomOf="@+id/installCommandHelp"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/npmHelp"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -205,14 +206,14 @@
         android:text="NPM"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/moreHelp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/brewHelp"
         app:layout_constraintTop_toTopOf="@+id/brewHelp"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/curlHelp"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -229,7 +230,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cliHeader"/>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/installCommandHelp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -252,7 +253,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/curlHelp"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/brewHelp"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -262,14 +263,14 @@
         android:text="BREW"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/npmHelp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/curlHelp"
         app:layout_constraintTop_toTopOf="@+id/curlHelp"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/moreHelp"
         android:layout_width="0dp"
         android:layout_height="20dp"
@@ -280,13 +281,13 @@
         android:text="MORE"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/appGray"
+        android:textColor="@color/appBlack"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/npmHelp"
         app:layout_constraintTop_toTopOf="@+id/npmHelp"/>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/editKnownHostsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -299,4 +300,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"/>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@
         android:textColor="@color/appBlack"
         />
 
-    <android.support.v7.widget.AppCompatTextView
+    <TextView
         android:id="@+id/authenticatorNameHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

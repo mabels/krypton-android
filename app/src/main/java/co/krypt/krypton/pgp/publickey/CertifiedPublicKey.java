@@ -1,7 +1,8 @@
 package co.krypt.krypton.pgp.publickey;
 
-import android.support.v4.util.Pair;
 import android.util.Log;
+
+import androidx.core.util.Pair;
 
 import java.io.DataInputStream;
 import java.io.EOFException;

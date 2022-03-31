@@ -1,8 +1,9 @@
 package co.krypt.krypton.crypto;
 
-import android.support.annotation.NonNull;
 import android.util.Base64;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import org.libsodium.jni.Sodium;
 
@@ -34,7 +35,8 @@ import co.krypt.krypton.pgp.publickey.PublicKeyPacketAttributes;
 
 public class EdSSHKeyPair implements SSHKeyPairI {
     private static final String TAG = "Ed25519SSHKeyPair";
-    private final @NonNull byte[] pk;
+    private final @NonNull
+    byte[] pk;
     private final @NonNull byte[] sk;
 
     //  PGP public key attribute

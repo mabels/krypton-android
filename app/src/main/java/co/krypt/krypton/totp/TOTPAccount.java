@@ -2,14 +2,13 @@ package co.krypt.krypton.totp;
 
 import android.net.Uri;
 
-import java.net.URISyntaxException;
-import java.sql.Timestamp;
-
+import com.google.common.io.BaseEncoding;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import org.apache.commons.codec.binary.Base32;
+import java.net.URISyntaxException;
+import java.sql.Timestamp;
 
 import javax.annotation.Nullable;
 
@@ -58,7 +57,8 @@ public class TOTPAccount {
             throw new URISyntaxException(uri, "The given host is not totp");
         }
         this.label = parsedUri.getPath();
-        this.secret = new Base32().decode(parsedUri.getQueryParameter("secret"));
+
+        this.secret = BaseEncoding.base32().decode(parsedUri.getQueryParameter("secret"));
         this.issuer = parsedUri.getQueryParameter("issuer");
         this.algorithm = parsedUri.getQueryParameter("algorithm");
         String digitString = parsedUri.getQueryParameter("digits");

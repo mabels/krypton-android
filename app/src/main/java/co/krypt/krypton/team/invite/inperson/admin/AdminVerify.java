@@ -1,15 +1,16 @@
 package co.krypt.krypton.team.invite.inperson.admin;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -24,7 +25,7 @@ import co.krypt.krypton.uiutils.Error;
  * Copyright 2018. KryptCo, Inc.
  */
 
-public class AdminVerify extends Fragment{
+public class AdminVerify extends Fragment {
     private static final String TAG = "AdminVerify";
 
     @Nullable

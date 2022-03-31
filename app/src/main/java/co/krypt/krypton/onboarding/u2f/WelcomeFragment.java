@@ -2,12 +2,13 @@ package co.krypt.krypton.onboarding.u2f;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import co.krypt.krypton.R;
 
@@ -29,7 +30,7 @@ public class WelcomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_welcome, container, false);
-        Button nextButton = root.findViewById(R.id.generateButton);
+        ImageButton nextButton = root.findViewById(R.id.generateButton);
         nextButton.setOnClickListener(v -> next());
 
         return root;

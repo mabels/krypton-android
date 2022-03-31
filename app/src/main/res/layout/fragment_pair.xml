@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -26,7 +26,7 @@
 
     </com.journeyapps.barcodescanner.BarcodeView>
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/crosshair"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -47,7 +47,7 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"/>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         tools:layout_constraintRight_creator="1"
@@ -64,7 +64,7 @@
         android:animateLayoutChanges="true"
         tools:layout_constraintTop_creator="1">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:text="Pairing..."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,9 +76,9 @@
             android:textAlignment="center" />
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cameraPermissionInfo"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -91,7 +91,7 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -104,7 +104,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/cameraPermissionTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/cameraPermissionExplanation"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
@@ -137,7 +137,7 @@
                 app:layout_constraintRight_toRightOf="@+id/cameraPermissionTitle"
                 app:layout_constraintTop_toBottomOf="@+id/cameraPermissionTitle" />
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/requestCameraPermissionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -152,8 +152,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

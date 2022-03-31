@@ -3,7 +3,7 @@ package co.krypt.krypton.team;
 import android.content.Context;
 import android.util.Log;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
@@ -208,7 +208,7 @@ public class TeamDataProvider {
                 lastLinkingWarningMillis.set(now);
                 Error.longToast(context, "Teams is not yet available on this phone. Please report your phone model to support@krypt.co.");
             }
-            Crashlytics.logException(e);
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
             Log.e(TAG, e.getMessage());
             throw new Native.NotLinked();

@@ -3,12 +3,12 @@ package co.krypt.krypton.team;
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import co.krypt.krypton.R;
 

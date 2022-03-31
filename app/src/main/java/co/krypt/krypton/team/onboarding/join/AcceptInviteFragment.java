@@ -2,13 +2,14 @@ package co.krypt.krypton.team.onboarding.join;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.fragment.app.Fragment;
 
 import com.google.gson.JsonObject;
 
@@ -94,7 +95,7 @@ public class AcceptInviteFragment extends Fragment {
     private static class AcceptInvite {}
 
     @Subscribe(threadMode = ThreadMode.ASYNC)
-    public void acceptInvite(AcceptInvite _) {
+    public void acceptInvite(AcceptInvite _nothing) {
         progress.updateTeamData((s, d) -> {
             byte[] challengeNonceBytes = null;
             if (d.emailChallengeNonce == null) {
@@ -152,7 +153,7 @@ public class AcceptInviteFragment extends Fragment {
     private static class Success {}
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onSuccess(Success _) {
+    public void onSuccess(Success _nothing) {
         Transitions.beginSlide(this)
                 .replace(R.id.fragment_teams, new JoinCompleteFragment())
                 .commitAllowingStateLoss();

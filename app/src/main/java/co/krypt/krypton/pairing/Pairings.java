@@ -3,8 +3,9 @@ package co.krypt.krypton.pairing;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.ArraySet;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 

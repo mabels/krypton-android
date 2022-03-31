@@ -3,7 +3,8 @@ package co.krypt.krypton.analytics;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.amazonaws.util.Base64;
 import com.jaredrummler.android.device.DeviceName;

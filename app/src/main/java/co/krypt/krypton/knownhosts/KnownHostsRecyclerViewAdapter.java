@@ -3,13 +3,14 @@ package co.krypt.krypton.knownhosts;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.graphics.Color;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.sql.SQLException;
 import java.util.List;

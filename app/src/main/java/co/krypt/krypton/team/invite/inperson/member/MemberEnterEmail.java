@@ -1,14 +1,16 @@
 package co.krypt.krypton.team.invite.inperson.member;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatEditText;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -27,7 +29,7 @@ import co.krypt.krypton.uiutils.Transitions;
  * Copyright 2018. KryptCo, Inc.
  */
 
-public class MemberEnterEmail extends Fragment{
+public class MemberEnterEmail extends Fragment {
     private static final String TAG = "MemberEnterEmail";
 
     private AppCompatEditText email;
@@ -41,7 +43,7 @@ public class MemberEnterEmail extends Fragment{
         email = v.findViewById(R.id.memberEmailInPerson);
 
         email.setText("loading...");
-        email.setTextColor(getResources().getColor(R.color.appGray, null));
+        email.setTextColor(ContextCompat.getColor(getContext(), R.color.appGray));
         email.setEnabled(false);
 
         Email.colorValidEmail(email);
@@ -83,7 +85,7 @@ public class MemberEnterEmail extends Fragment{
     public void updateEmail(GetProfileResult r) {
         if (r.profile != null) {
             email.setText(r.profile.email);
-            email.setTextColor(getResources().getColor(R.color.appBlack, null));
+            email.setTextColor(ContextCompat.getColor(getContext(), R.color.appBlack));
             email.setEnabled(true);
             nextButton.setEnabled(true);
         }

@@ -1,10 +1,14 @@
 package co.krypt.krypton;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import android.content.Context;
 import android.security.keystore.KeyProperties;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
+
+import androidx.test.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,9 +19,6 @@ import co.krypt.krypton.crypto.KeyManager;
 import co.krypt.krypton.crypto.KeyType;
 import co.krypt.krypton.crypto.RSAKeyManager;
 import co.krypt.krypton.crypto.SSHKeyPairI;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Instrumentation test, which will execute on an Android device.

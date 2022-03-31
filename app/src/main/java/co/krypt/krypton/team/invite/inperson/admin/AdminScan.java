@@ -1,14 +1,15 @@
 package co.krypt.krypton.team.invite.inperson.admin;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.fragment.app.Fragment;
 
 import com.google.gson.JsonParseException;
 import com.google.zxing.ResultPoint;
@@ -30,7 +31,7 @@ import co.krypt.krypton.uiutils.Transitions;
  * Copyright 2018. KryptCo, Inc.
  */
 
-public class AdminScan extends Fragment{
+public class AdminScan extends Fragment {
 
     public static final AtomicReference<Sigchain.MemberQRPayload> lastScannedPayload = new AtomicReference<>();
     private static final String TAG = "AdminScan";

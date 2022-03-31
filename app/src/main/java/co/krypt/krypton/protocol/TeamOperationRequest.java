@@ -1,8 +1,9 @@
 package co.krypt.krypton.protocol;
 
-import android.support.constraint.ConstraintLayout;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.gson.annotations.SerializedName;
 

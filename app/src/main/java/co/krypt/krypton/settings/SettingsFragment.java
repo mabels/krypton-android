@@ -8,8 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +15,9 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -108,7 +109,7 @@ public class SettingsFragment extends Fragment {
         };
         updateDeleteButton.run();
 
-        Button contactButton = (Button) root.findViewById(R.id.contactUsButton);
+        Button contactButton = root.findViewById(R.id.contactUsButton);
         contactButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,7 +120,7 @@ public class SettingsFragment extends Fragment {
             }
         });
 
-        Button softwareButton = (Button) root.findViewById(R.id.softwareButton);
+        Button softwareButton = root.findViewById(R.id.softwareButton);
         softwareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +129,7 @@ public class SettingsFragment extends Fragment {
             }
         });
 
-        Button privacyButton = (Button) root.findViewById(R.id.privacyButton);
+        Button privacyButton = root.findViewById(R.id.privacyButton);
         privacyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -39,7 +39,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
         // https://github.com/wix/react-native-notifications/issues/42
         PowerManager pm = (PowerManager)getBaseContext().getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock wl_cpu = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,"MyCpuLock");
+        PowerManager.WakeLock wl_cpu = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,"krypyon:MyCpuLock");
         wl_cpu.acquire(10000);
 
         String message = notification.get("message");

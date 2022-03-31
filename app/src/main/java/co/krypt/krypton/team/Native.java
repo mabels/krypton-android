@@ -2,7 +2,7 @@ package co.krypt.krypton.team;
 
 import android.util.Log;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -80,7 +80,7 @@ public class Native {
             }
         } catch (UnsatisfiedLinkError e) {
             Log.e(TAG, e.getMessage());
-            Crashlytics.logException(e);
+            FirebaseCrashlytics.getInstance().recordException(e);
         }
     }
 }

@@ -1,16 +1,17 @@
 package co.krypt.krypton.team.invite.inperson.member;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatImageView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.gson.JsonObject;
 import com.google.zxing.BarcodeFormat;
@@ -43,7 +44,7 @@ import co.krypt.krypton.uiutils.Transitions;
  * Copyright 2018. KryptCo, Inc.
  */
 
-public class MemberQR extends Fragment{
+public class MemberQR extends Fragment {
 
     private AppCompatImageView qr = null;
     private ProgressBar loadQRProgress;
@@ -186,7 +187,7 @@ public class MemberQR extends Fragment{
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onReadSuccess(Succeed _) {
+    public void onReadSuccess(Succeed _nothing) {
         EventBus.getDefault().unregister(this);
         Transitions.beginSlide(this)
                 .replace(R.id.fragmentOverlay, new MemberVerifyEmail())
@@ -194,7 +195,7 @@ public class MemberQR extends Fragment{
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onReadFail(Fail _) {
+    public void onReadFail(Fail _nothing) {
         EventBus.getDefault().unregister(this);
         Error.shortToast(getContext(), "Failed to join team, please try again.");
         getFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);

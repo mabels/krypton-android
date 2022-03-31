@@ -1,19 +1,24 @@
 package co.krypt.krypton.onboarding;
 
+import static co.krypt.kryptonite.MainActivity.CAMERA_PERMISSION_GRANTED_ACTION;
+import static co.krypt.kryptonite.MainActivity.CAMERA_PERMISSION_REQUEST;
+import static co.krypt.kryptonite.MainActivity.USER_AUTHENTICATION_REQUEST;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.util.Iterator;
 
@@ -30,10 +35,6 @@ import co.krypt.krypton.pairing.Pairing;
 import co.krypt.krypton.policy.LocalAuthentication;
 import co.krypt.krypton.silo.Silo;
 import co.krypt.krypton.utils.Services;
-
-import static co.krypt.kryptonite.MainActivity.CAMERA_PERMISSION_GRANTED_ACTION;
-import static co.krypt.kryptonite.MainActivity.CAMERA_PERMISSION_REQUEST;
-import static co.krypt.kryptonite.MainActivity.USER_AUTHENTICATION_REQUEST;
 
 public class OnboardingActivity extends FragmentActivity {
 

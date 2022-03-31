@@ -3,16 +3,18 @@ package co.krypt.krypton.team.home;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.ListViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -43,7 +45,7 @@ import co.krypt.krypton.team.TeamService.C;
 public class PinHostsFragment extends Fragment {
     private static final String TAG = "PinHostsFragment";
 
-    private ListViewCompat hostsList;
+    private ListView hostsList;
     private HostsAdapter hostsAdapter;
 
     @Override
@@ -189,17 +191,17 @@ public class PinHostsFragment extends Fragment {
 
             AppCompatButton pinUnpinButton = v.findViewById(R.id.pinUnpinButton);
             if (h.pinned) {
-                host.setTextColor(getResources().getColor(R.color.appGreen, null));
+                host.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
                 pinUnpinButton.setText("Unpin");
-                pinUnpinButton.setTextColor(getResources().getColor(R.color.appReject, null));
+                pinUnpinButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appReject));
                 pinUnpinButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.outline_button_reject, null));
                 pinUnpinButton.setOnClickListener(v_ -> {
                     requestOp(Sigchain.RequestableTeamOperation.unpinHostKey(h.host));
                 });
             } else {
-                host.setTextColor(getResources().getColor(R.color.appWarning, null));
+                host.setTextColor(ContextCompat.getColor(getContext(), R.color.appWarning));
                 pinUnpinButton.setText("Pin");
-                pinUnpinButton.setTextColor(getResources().getColor(R.color.appGreen, null));
+                pinUnpinButton.setTextColor(ContextCompat.getColor(getContext(), R.color.appGreen));
                 pinUnpinButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.outline_button, null));
                 pinUnpinButton.setOnClickListener(v_ -> {
                     requestOp(Sigchain.RequestableTeamOperation.pinHostKey(h.host));

@@ -1,9 +1,10 @@
 package co.krypt.krypton.uiutils;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 import java.util.regex.Pattern;
 
